@@ -1,0 +1,41 @@
+body{
+    background: linear-gradient(to bottom,black,gray);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 100vh;
+}
+
+.main{
+    text-align: center;
+    margin-top: 200px;
+
+
+}
+.btns button{
+    background-color:lightblue;
+    color: red;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 2vw 2vw;
+    margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

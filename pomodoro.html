@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="pomodoro.css">
+</head>
+<body>
+
+    
+
+    <div class="main">
+
+        <div class="timer-box">
+
+            <!-- <h1>Pomodoro Timer</h1> -->
+            <h1 style="color:aquamarine;">Pomodora Timer</h1>
+
+            
+
+            <h2 id="time" style="color:yellow; margin-top: 18vw;">25 : 00</h2>
+
+            <div class="btns">
+                <button onclick="startTimer()">Start</button>
+                <button onclick="pauseTimer()">Pause</button>
+                <button onclick="resetTimer()">Reset</button>
+            </div>
+
+        </div>
+
+    </div>
+<script>
+    
+
+let totalSeconds = 1500; // 25 min
+
+let timer;
+
+
+// Show time function
+function showTime(){
+
+    let minutes = Math.floor(totalSeconds / 60);
+
+    let seconds = totalSeconds % 60;
+
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    document.getElementById("time").innerText =
+        minutes + ":" + seconds;
+}
+
+
+// Start timer
+function startTimer(){
+
+    clearInterval(timer);
+
+    timer = setInterval(() => {
+
+        totalSeconds--;
+
+        showTime();
+
+        if(totalSeconds <= 0){
+
+            clearInterval(timer);
+
+            document.getElementById("time").innerText =
+            "Time Over";
+        }
+
+    },1000);
+}
+
+
+// Pause timer
+function pauseTimer(){
+
+    clearInterval(timer);
+}
+
+
+// Reset timer
+function resetTimer(){
+
+    clearInterval(timer);
+
+    let userMinute = prompt("Enter Time In Minutes");
+
+    totalSeconds = userMinute * 60;
+
+    showTime();
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>25 Minute Timer</title>
+</head>
+<body>
+
+<h1>25 Minute Timer</h1>
+
+<p id="time">25:00</p>
+
+<script>
+
+
+// let timer = setInterval(() => {
+
+//     let minutes = Math.floor(totalSeconds / 60);
+//     let seconds = totalSeconds % 60;
+
+//     // Add 0 before seconds if needed
+//     seconds = seconds < 10 ? "0" + seconds : seconds;
+
+//     document.getElementById("time").innerText =
+//         minutes + ":" + seconds;
+
+//     totalSeconds--;
+
+//     // Stop at 0
+//     if (totalSeconds < 0) {
+//         clearInterval(timer);
+//         document.getElementById("time").innerText = "Time Over";
+//     }
+
+// }, 1000);
+let totalseconds =  60*25; // 25 minutes
+let timer = setInterval(() => {
+    let minutes=Math.floor(totalseconds/60);
+    let seconds = totalseconds%60;
+
+ Add 0 before Seconds if
+  needed Seconds = Seconds < 10 ?"0"+seconds:seconds;
+
+document.getElementById("time").innerText=minutes + ":"+ seconds;
+
+totalseconds--;
+//stop at 0
+if (totalseconds<0){
+    clearInterval(timer);
+    document.getElementById("time").innertext="TimeOver";}
+
+},1000);
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
