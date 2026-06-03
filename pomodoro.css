@@ -1,41 +1,69 @@
 body{
-    background: linear-gradient(to bottom,black,gray);
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
     height: 100vh;
+    background-image:url(pomodorobgimage.jpeg);
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    transition: background-color 0.4s ease;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-family:arial,sans-serif;
 }
 
 .main{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.timer-box{
+     width: 22.5%;
+     height: 48vh;
+    padding:30px;
+
     text-align: center;
-    margin-bottom: 50px;
+    background:rgba(0,0,0,0.3);
+    backdrop-filter:blur(10px);
+    border-radius:45px;
+    color:white;
+    }
+
+    .timer{
+        margin:65px 0;
+        
+    }
+
+    .timer h2{
+        font-size:25px;
+
+    }
+
+    .btns button{
+        padding:12px 20px;
+        margin:7px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        font-size:16px;
+        font-weight: bold;
+
+        background-color:white;
+        transition: 0.3s;
+
+    }
+
+    .btns button:hover{
+        background-color:white;
+        color :greenyellow;
+    }
 
 
-}
-.btns button{
-    background-color:lightblue;
-    color: red;
-    font-weight: bold;
-    font-family: 'Times New Roman', Times, serif;
-    padding: 1vw 1vw;
-    margin-top: 100px;
-}
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+    
