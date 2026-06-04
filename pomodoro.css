@@ -20,10 +20,9 @@ body{
 }
 
 .timer-box{
-     width: 90%;
-     max-width: 600px;
-     min-height:300px;
-    padding:15px;
+     width: 22.5%;
+     height: 48vh;
+    padding:30px;
 
     text-align: center;
     background:rgba(0,0,0,0.3);
@@ -38,7 +37,7 @@ body{
     }
 
     .timer h2{
-        font-size:clamp(2rem, 8vw, 5rem);
+        font-size:25px;
 
     }
 
@@ -61,8 +60,27 @@ body{
         color :greenyellow;
     }
 
+@media (max-width:480px){
 
+    .timer-box{
+        width:95%;
+        padding:15px;
+    }
 
+    .timer h2{
+        font-size:40px;
+    }
+
+    .btns{
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .btns button{
+        width:100%;
+    }
+}
 
 
 
